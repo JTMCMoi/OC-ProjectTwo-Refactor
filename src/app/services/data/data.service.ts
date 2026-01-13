@@ -16,6 +16,7 @@ export class DataService {
 
     if ( !this.olympics$ )
     {
+      //Emmet une seule fois et ne nécessite donc pas de gestion de l'observable
       this.olympics$ = this.http.get<Olympic[]>(this.url).pipe(
         shareReplay(1),
         catchError((r:HttpErrorResponse) => throwError(() => new Error(`Erreur on getting datas (${r.message})`)))
