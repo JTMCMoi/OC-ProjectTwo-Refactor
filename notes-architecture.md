@@ -98,7 +98,7 @@ Le `DataService` retournera les données via des `interface` définies dans le d
         - not-found.component.html
         - not-found.component.scss
         - not-found.component.ts
-- /src/app/services
+- /src/app/services/
     - data/
         - data.service.ts
 
