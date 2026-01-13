@@ -8,10 +8,11 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { CountryComponent } from "./pages/country/country.component";
 import { HeaderComponent } from './components/header/header.component';
 import { MedalsChartComponent } from './components/medals-chart/medals-chart.component';
+import { CountryChartComponent } from './components/country-chart/country-chart.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent, CountryComponent],
-  imports: [BrowserModule, AppRoutingModule, HeaderComponent, MedalsChartComponent],
+  imports: [BrowserModule, AppRoutingModule, HeaderComponent, MedalsChartComponent, CountryChartComponent],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
