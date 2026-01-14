@@ -1,29 +1,37 @@
-# OlympicGamesStarter
+# Olympic Games
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+## Présentation
 
-Don't forget to install your node_modules before starting (`npm install`).
+Cette application affiche les statistiques de participations aux Jeux Olympiques de différents pays.
 
-## Development server
+On peut y retrouver le nombre de Jeux Olympiques concernés ainsi que le total de médailles obtenues par les pays,
+Mais aussi des statistiques détaillées par pays avec :
+- Le nombre d'athlètes.
+- Les années de participation.
+- Le nombre de médaille obtenues par année.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Build
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1) Cloner ce dépôt.
+2) A la racine du projet exécutez la commande `npm install` pour installer les dépendances requises.
+3) A la racine du projet exécutez la commande `ng serve` pour démarrer le projet.
+4) Rendez-vous sur l'URL indiquée par la commande.
 
-## Where to start
+## Documentation
 
-As you can see, an architecture has already been defined for the project. It is just a suggestion, you can choose to use your own. The predefined architecture includes (in addition to the default angular architecture) the following:
+Le site dispose de 3 pages (`src/app/pages`) :
+- `home` : Page d'accueil affichant l'ensemble des pays concernés et leur total de médailles.
+- `country` : Page de détails d'un pays avec le nombre total d'athlètes et le nombre de médailles par années de participations.
+- `not-found` : Page d'erreur affichée pour une page inexistante.
 
-- `components` folder: contains every reusable components
-- `pages` folder: contains components used for routing
-- `core` folder: contains the business logic (`services` and `models` folders)
+Les routes (URL) des pages sont définies dans `src/app/app-routing.module.ts`.
 
-I suggest you to start by understanding this starter code. Pay an extra attention to the `app-routing.module.ts` and the `olympic.service.ts`.
+Un service `data` (`src/app/services`) permet de récupérer les données pour l'application.
+Ainsi que les modèles de données associées dans `src/app/models`.
 
-Once mastered, you should continue by creating the typescript interfaces inside the `models` folder. As you can see I already created two files corresponding to the data included inside the `olympic.json`. With your interfaces, improve the code by replacing every `any` by the corresponding interface.
-
-You're now ready to implement the requested features.
-
-Good luck!
+Les différents éléments composants des pages sont définis dans `src/app/components` :
+- `header` : Titre de la page avec les encadrés bleu-vert.
+- `medal-chart` : Camembert de la page d'accueil.
+- `country-chart` : Graphique des participations d'un pays.
