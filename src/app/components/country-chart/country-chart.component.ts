@@ -15,10 +15,11 @@ export class CountryChartComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if ( !this.chart) {
-      if ( this.years && this.medals ) {
-        this.buildChart(this.years,this.medals)
-      }
+      this.buildChart(this.years,this.medals)
     }
+    this.chart.data.labels = this.years;
+    this.chart.data.datasets[0].data = this.medals;
+    this.chart.update();
   }
 
   buildChart(years: number[], medals: string[]) {
