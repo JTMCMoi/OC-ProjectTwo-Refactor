@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import Chart from 'chart.js/auto';
 import { DataService } from '../../services/data/data.service';
 import { Olympic } from 'src/app/models/olympic';
 import { Participation } from 'src/app/models/participation';
